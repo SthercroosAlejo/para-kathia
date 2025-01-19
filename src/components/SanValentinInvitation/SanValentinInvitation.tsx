@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import './SanValentinInvitation.css';
+import {useNavigate} from "react-router-dom";
 
 function SanValentinInvitation() {
     // Controlamos cuál GIF está visible
@@ -29,7 +30,7 @@ function SanValentinInvitation() {
 
     // Control de la secuencia de clicks en el botón "No"
     const [noButtonState, setNoButtonState] = useState(0);
-
+    const navigate = useNavigate();
     // -----------------------------
     // Al hacer click en "Sí" (siBtn)
     // -----------------------------
@@ -81,8 +82,7 @@ function SanValentinInvitation() {
     // Al hacer click en "Sorpresa"
     // -----------------------------
     const handleSorpresa = () => {
-        // Redireccionar a "flores.html"
-        window.location.href = 'flores.html';
+        navigate('/flores');
     };
 
     // -----------------------------
