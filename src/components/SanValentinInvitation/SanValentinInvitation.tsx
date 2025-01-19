@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './SanValentinInvitation.css';
 
 function SanValentinInvitation() {
@@ -261,6 +261,15 @@ function SanValentinInvitation() {
                 break;
         }
     };
+
+    useEffect(() => {
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'auto';
+
+        return () => {
+            document.body.style.overflow = originalOverflow;
+        };
+    }, []);
 
     return (
         <div className={`san-container ${isGreenBackground ? 'bg-green' : ''}`}>
