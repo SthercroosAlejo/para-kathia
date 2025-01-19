@@ -32,11 +32,10 @@ const CardLetter = () => {
                 <div className={`cover ${isOpen ? 'open-cover' : ''}`} style={{zIndex: coverZIndex}}></div>
                 <span className="heart" style={{display: showHeart ? 'block' : 'none'}}></span>
                 <p className={`paper ${isOpen ? 'open-paper' : 'close-paper'}`}>
-                    En este día especial de amor y amistad, celebremos los lazos que nos unen.
-                    Que la alegría y el cariño nos acompañen siempre. ¡Feliz día!
+                    Eres parte importante en este camino, y quiero que sepas que te amo mucho.
                     <div style={{textAlign: 'center'}}>
                         <Link to="/valentines">
-                            <button>Ir a la otra carta</button>
+                            <button>Abrir</button>
                         </Link>
                     </div>
                 </p>
